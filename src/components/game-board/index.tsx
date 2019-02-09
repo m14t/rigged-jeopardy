@@ -4,6 +4,14 @@ import validateQuestions from './validate-questions';
 import { lensPath, pluck, range, view } from 'ramda';
 
 const maxValue = 1000;
+const styles = {
+  table: {
+    backgroundColor: '#000000',
+    color: '#ffffff',
+    height: '100%',
+    width: '100%',
+  },
+};
 
 function GameBoard() {
   validateQuestions(questionData);
@@ -13,7 +21,7 @@ function GameBoard() {
   const valueIncrement = maxValue / questionLength;
 
   return (
-    <table>
+    <table style={styles.table}>
       <thead>
         <tr>
           <td />
