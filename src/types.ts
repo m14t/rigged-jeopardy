@@ -2,7 +2,7 @@ interface Category {
   category: string;
   questions: QuestionContainer[];
 }
-interface QuestionContainer {
+export interface QuestionContainer {
   easy: Question;
   hard: Question;
 }
