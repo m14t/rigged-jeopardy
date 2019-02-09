@@ -1,13 +1,7 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        Jeopardy
-      </div>
-    );
-  }
+function App() {
+  return <div>Jeopardy</div>;
 }
 
 export default App;
