@@ -15,7 +15,8 @@ export interface QuestionContainer {
 }
 
 interface Question {
-  question: string;
+  text?: string;
+  image?: string;
   answer: string;
 }
 

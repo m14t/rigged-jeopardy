@@ -32,7 +32,7 @@ type Props = {
 
 function Question(props: Props) {
   const [selected, setSelected] = useState(false);
-  const [value, setValue] = useState(`${Math.floor(props.value)}`);
+  const [value, setValue] = useState(`${Math.floor(props.value)}` as any);
 
   const onClick = useCallback(
     (event) => {
@@ -40,11 +40,25 @@ function Question(props: Props) {
         return;
       }
       setSelected(true);
-      setValue(
-        event.shiftKey
-          ? props.question.hard.question
-          : props.question.easy.question,
-      );
+
+      const question = event.shiftKey
+        ? props.question.hard
+        : props.question.easy;
+
+      if (question.text) {
+        setValue(question.text);
+      } else {
+        setValue(
+          <div
+            style={{
+              background: `url(${question.image})`,
+              backgroundSize: 'cover',
+              height: '100%',
+              width: '100%',
+            }}
+          />,
+        );
+      }
     },
     [props.disabled, selected, value],
   );

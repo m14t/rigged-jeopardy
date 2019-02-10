@@ -6,21 +6,21 @@ const questionData: QuestionData = [
     questions: [
       {
         easy: {
-          question: 'Year Easy 1',
+          image: '/images/celebrity_250_hard_2008.jpg',
           answer: '2019',
         },
         hard: {
-          question: 'Year Hard 1',
+          text: 'Year Hard 1',
           answer: '2019',
         },
       },
       {
         easy: {
-          question: 'Year Easy 2',
+          text: 'Year Easy 2',
           answer: '2019',
         },
         hard: {
-          question: 'Year Hard 2',
+          text: 'Year Hard 2',
           answer: '2019',
         },
       },
@@ -31,21 +31,21 @@ const questionData: QuestionData = [
     questions: [
       {
         easy: {
-          question: 'Twomb Easy 1',
+          text: 'Twomb Easy 1',
           answer: '2019',
         },
         hard: {
-          question: 'Twomb Hard 1',
+          text: 'Twomb Hard 1',
           answer: '2019',
         },
       },
       {
         easy: {
-          question: 'Twomb Easy 2',
+          text: 'Twomb Easy 2',
           answer: '2019',
         },
         hard: {
-          question: 'Twomb Hard 2',
+          text: 'Twomb Hard 2',
           answer: '2019',
         },
       },
