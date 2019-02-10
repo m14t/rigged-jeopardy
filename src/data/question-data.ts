@@ -6,7 +6,7 @@ const questionData: QuestionData = [
     questions: [
       {
         easy: {
-          image: '/images/celebrity_250_hard_2008.jpg',
+          image: `${process.env.PUBLIC_URL}/images/celebrity_250_hard_2008.jpg`,
           answer: '2019',
         },
         hard: {
