@@ -8,10 +8,14 @@ import { QuestionContainer } from '../../types';
 const maxValue = 1000;
 const styles = {
   table: {
-    backgroundColor: '#000000',
+    position: 'relative' as 'relative',
     color: '#ffffff',
-    height: '100%',
+    height: '90vh',
     width: '100%',
+  },
+  th: {
+    textAlign: 'center' as 'center',
+    padding: '10px',
   },
 };
 
@@ -27,7 +31,9 @@ function GameBoard() {
       <thead>
         <tr>
           {categories.map((category) => (
-            <td key={category}>{category}</td>
+            <th key={category} style={styles.th}>
+              {category}
+            </th>
           ))}
         </tr>
       </thead>
