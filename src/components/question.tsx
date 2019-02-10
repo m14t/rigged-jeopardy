@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { QuestionContainer } from '../types';
 import { useState, useCallback } from 'react';
+const { useEffect } = React;
 
 const styles = {
   question: {
@@ -23,22 +24,49 @@ const styles = {
 };
 
 type Props = {
+  onClose: (points: number) => void;
   question: QuestionContainer;
   value: number;
 };
 
 function Question(props: Props) {
   const [selected, setSelected] = useState(false);
-  const [value, setValue] = useState(`$${Math.floor(props.value)}`);
+  const [value, setValue] = useState(`${Math.floor(props.value)}`);
 
-  const onClick = useCallback((event) => {
-    setSelected(true);
-    setValue(
-      event.shiftKey
-        ? props.question.hard.question
-        : props.question.easy.question,
-    );
-  }, []);
+  const onClick = useCallback(
+    (event) => {
+      setSelected(true);
+      setValue(
+        event.shiftKey
+          ? props.question.hard.question
+          : props.question.easy.question,
+      );
+    },
+    [selected, props.question],
+  );
+
+  const losingKeys = ['-', '_'];
+  const winningKeys = ['=', '+'];
+  const targetKeys = [...losingKeys, ...winningKeys];
+  function downHandler({ key }: KeyboardEvent) {
+    if (selected && targetKeys.includes(key)) {
+      setSelected(false);
+      setValue('');
+
+      if (losingKeys.includes(key)) {
+        props.onClose(-1 * props.value);
+      } else {
+        props.onClose(props.value);
+      }
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('keydown', downHandler);
+    return () => {
+      window.removeEventListener('keydown', downHandler);
+    };
+  }, [props.onClose, selected]);
 
   return (
     <div

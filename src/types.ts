@@ -6,6 +6,7 @@ interface Category {
 export interface Player {
   name: string;
   score: number;
+  selected: boolean;
 }
 
 export interface QuestionContainer {

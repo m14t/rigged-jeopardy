@@ -19,7 +19,11 @@ const styles = {
   },
 };
 
-function GameBoard() {
+type Props = {
+  onQuestionClose: (points: number) => void;
+};
+
+function GameBoard(props: Props) {
   validateQuestions(questionData);
 
   const categories = pluck('category', questionData);
@@ -45,6 +49,7 @@ function GameBoard() {
               .map((question, column) => (
                 <td key={`r${row}c${column}`}>
                   <Question
+                    onClose={props.onQuestionClose}
                     question={question as QuestionContainer}
                     value={(row + 1) * valueIncrement}
                   />
