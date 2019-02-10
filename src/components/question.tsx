@@ -24,6 +24,7 @@ const styles = {
 };
 
 type Props = {
+  disabled: boolean;
   onClose: (points: number) => void;
   question: QuestionContainer;
   value: number;
@@ -35,7 +36,7 @@ function Question(props: Props) {
 
   const onClick = useCallback(
     (event) => {
-      if (value === '') {
+      if (props.disabled || value === '') {
         return;
       }
       setSelected(true);
@@ -45,7 +46,7 @@ function Question(props: Props) {
           : props.question.easy.question,
       );
     },
-    [selected, value],
+    [props.disabled, selected, value],
   );
 
   const losingKeys = ['-', '_'];

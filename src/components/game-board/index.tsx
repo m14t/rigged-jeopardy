@@ -20,6 +20,7 @@ const styles = {
 };
 
 type Props = {
+  disabled: boolean;
   onQuestionClose: (points: number) => void;
 };
 
@@ -49,6 +50,7 @@ function GameBoard(props: Props) {
               .map((question, column) => (
                 <td key={`r${row}c${column}`}>
                   <Question
+                    disabled={props.disabled}
                     onClose={props.onQuestionClose}
                     question={question as QuestionContainer}
                     value={(row + 1) * valueIncrement}

@@ -81,7 +81,10 @@ function App() {
 
   return (
     <div style={styles.app}>
-      <GameBoard onQuestionClose={updatePoints} />
+      <GameBoard
+        disabled={!players.some(propEq('selected', true))}
+        onQuestionClose={updatePoints}
+      />
       <Players players={players} selectPlayer={selectPlayer} />
     </div>
   );
