@@ -72,8 +72,12 @@ function Question(props: Props) {
       setValue('');
 
       if (losingKeys.includes(key)) {
+        new Audio('/mp3s/dont-impress-me-much.mp3').play();
+
         props.onClose(-1 * props.value);
       } else {
+        new Audio('/mp3s/whoomp.mp3').play();
+
         props.onClose(props.value);
       }
     }
