@@ -35,6 +35,9 @@ function Question(props: Props) {
 
   const onClick = useCallback(
     (event) => {
+      if (value === '') {
+        return;
+      }
       setSelected(true);
       setValue(
         event.shiftKey
@@ -42,7 +45,7 @@ function Question(props: Props) {
           : props.question.easy.question,
       );
     },
-    [selected, props.question],
+    [selected, value],
   );
 
   const losingKeys = ['-', '_'];
