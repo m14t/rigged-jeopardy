@@ -9,7 +9,7 @@ const styles = {
     backgroundColor: '#0000ff',
     color: '#ffffff',
     display: 'flex',
-    fontSize: '10vh',
+    fontSize: '9vh',
     height: '100%',
     justifyContent: 'center',
     width: '100%',
@@ -20,6 +20,19 @@ const styles = {
     left: 0,
     right: 0,
     bottom: 0,
+  },
+  image: {
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'contain',
+    flex: 1,
+    height: '100%',
+  },
+  text: {
+    alignContent: 'center',
+    flex: 1,
+    padding: '0 20px',
+    textAlign: 'center' as 'center',
   },
 };
 
@@ -45,20 +58,19 @@ function Question(props: Props) {
         ? props.question.hard
         : props.question.easy;
 
-      if (question.text) {
-        setValue(question.text);
-      } else {
-        setValue(
-          <div
-            style={{
-              background: `url(${question.image})`,
-              backgroundSize: 'cover',
-              height: '100%',
-              width: '100%',
-            }}
-          />,
-        );
-      }
+      setValue(
+        <>
+          {question.image && (
+            <div
+              style={{
+                ...styles.image,
+                backgroundImage: `url(${question.image})`,
+              }}
+            />
+          )}
+          {question.text && <div style={styles.text}>{question.text}</div>}
+        </>,
+      );
     },
     [props.disabled, selected, value],
   );
