@@ -10,7 +10,7 @@ const styles = {
     backgroundColor: '#0000ff',
     color: '#ffffff',
     display: 'flex',
-    fontSize: '9vh',
+    fontSize: '8.5vh',
     height: '100%',
     justifyContent: 'center',
     width: '100%',
