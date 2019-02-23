@@ -5,7 +5,7 @@ import { lensPath, pluck, range, view } from 'ramda';
 import Question from '../question';
 import { QuestionContainer } from '../../types';
 
-const maxValue = 1000;
+const pointValues = [17, 42, 69];
 const styles = {
   table: {
     position: 'relative' as 'relative',
@@ -29,7 +29,6 @@ function GameBoard(props: Props) {
 
   const categories = pluck('category', questionData);
   const questionLength = questionData[0].questions.length;
-  const valueIncrement = maxValue / questionLength;
 
   return (
     <table style={styles.table}>
@@ -53,7 +52,7 @@ function GameBoard(props: Props) {
                     disabled={props.disabled}
                     onClose={props.onQuestionClose}
                     question={question as QuestionContainer}
-                    value={(row + 1) * valueIncrement}
+                    value={pointValues[row]}
                   />
                 </td>
               ))}
