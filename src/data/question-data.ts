@@ -226,13 +226,14 @@ const questionData: QuestionData = [
       // Question 3
       {
         easy: {
-          text: '???',
+          // text: '???',
           // image: `${process.env.PUBLIC_URL}/images/food_750_2012.jpg`,
+          video: `${process.env.PUBLIC_URL}/videos/easy.mp4`,
           answer: '???',
         },
         hard: {
-          text: '???',
-          // image: `${process.env.PUBLIC_URL}/images/food_750_2012.jpg`,
+          // text: '???',
+          video: `${process.env.PUBLIC_URL}/videos/hard.mp4`,
           answer: '???',
         },
       },

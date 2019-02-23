@@ -34,6 +34,9 @@ const styles = {
     padding: '0 20px',
     textAlign: 'center' as 'center',
   },
+  video: {
+    height: '100%',
+  },
 };
 
 type Props = {
@@ -67,6 +70,11 @@ function Question(props: Props) {
                 backgroundImage: `url(${question.image})`,
               }}
             />
+          )}
+          {question.video && (
+            <video controls style={styles.video}>
+              <source src={question.video} type="video/mp4" />
+            </video>
           )}
           {question.text && <div style={styles.text}>{question.text}</div>}
         </>,

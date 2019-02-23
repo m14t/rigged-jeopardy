@@ -17,6 +17,7 @@ export interface QuestionContainer {
 interface Question {
   text?: string;
   image?: string;
+  video?: string;
   answer: string;
 }
 
