@@ -149,12 +149,12 @@ const questionData: QuestionData = [
       {
         easy: {
           text:
-            'Hey Daddy-o, this is the Goss you know, Ramones were the only band listened to',
+            'Hey Daddy-o,<br />This is the Goss you know,<br />Ramones were the only band listened to',
           answer: '2004-2019',
         },
         hard: {
           text:
-            'Doo doo doo do.  Doo doo doo do.  Doo doo doo do. Doo doo doo do.  Do you have the time?',
+            'Doo doo doo do.<br />Doo doo doo do.<br />Doo doo doo do.<br />Doo doo doo do.<br />Do you have the time?',
           answer: 'What is the 90s Medley from Gosselin 2008?',
         },
       },

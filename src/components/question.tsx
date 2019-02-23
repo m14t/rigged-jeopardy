@@ -1,4 +1,5 @@
-import * as React from 'react';
+// @ts-ignore --  has no exported member 'dangerouslySetInnerHTML'.  TS2305
+import React, { dangerouslySetInnerHTML } from 'react';
 import { QuestionContainer } from '../types';
 import { useState, useCallback } from 'react';
 const { useEffect } = React;
@@ -76,7 +77,14 @@ function Question(props: Props) {
               <source src={question.video} type="video/mp4" />
             </video>
           )}
-          {question.text && <div style={styles.text}>{question.text}</div>}
+          {question.text && (
+            <div
+              dangerouslySetInnerHTML={{
+                __html: question.text,
+              }}
+              style={styles.text}
+            />
+          )}
         </>,
       );
     },
