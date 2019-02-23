@@ -12,9 +12,11 @@ const styles = {
   players: {
     color: '#ffffff',
     display: 'flex',
+    fontSize: '25px',
+    fontWeight: 'bold' as 'bold',
+    height: '15vh',
     justifyContent: 'space-between',
     margin: '0 10px',
-    height: '10vh',
   },
   player: {
     backgroundColor: '#0000ff',

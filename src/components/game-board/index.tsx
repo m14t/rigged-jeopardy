@@ -10,12 +10,15 @@ const styles = {
   table: {
     position: 'relative' as 'relative',
     color: '#ffffff',
-    height: '90vh',
+    height: '80vh',
     width: '100%',
   },
   th: {
-    textAlign: 'center' as 'center',
+    border: '2px solid #ffffff',
+    fontSize: '34px',
+    height: '15vh',
     padding: '10px',
+    textAlign: 'center' as 'center',
   },
 };
 
