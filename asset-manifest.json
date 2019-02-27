@@ -1,13 +1,13 @@
 {
-  "main.css": "/rigged-jeopardy/static/css/main.265ba094.chunk.css",
-  "main.js": "/rigged-jeopardy/static/js/main.6eca26d4.chunk.js",
-  "main.js.map": "/rigged-jeopardy/static/js/main.6eca26d4.chunk.js.map",
+  "main.css": "/rigged-jeopardy/static/css/main.02d69336.chunk.css",
+  "main.js": "/rigged-jeopardy/static/js/main.62d00930.chunk.js",
+  "main.js.map": "/rigged-jeopardy/static/js/main.62d00930.chunk.js.map",
   "static/js/1.aa5b4f5f.chunk.js": "/rigged-jeopardy/static/js/1.aa5b4f5f.chunk.js",
   "static/js/1.aa5b4f5f.chunk.js.map": "/rigged-jeopardy/static/js/1.aa5b4f5f.chunk.js.map",
   "runtime~main.js": "/rigged-jeopardy/static/js/runtime~main.833f16ad.js",
   "runtime~main.js.map": "/rigged-jeopardy/static/js/runtime~main.833f16ad.js.map",
-  "static/css/main.265ba094.chunk.css.map": "/rigged-jeopardy/static/css/main.265ba094.chunk.css.map",
+  "static/css/main.02d69336.chunk.css.map": "/rigged-jeopardy/static/css/main.02d69336.chunk.css.map",
   "index.html": "/rigged-jeopardy/index.html",
-  "precache-manifest.925d214c97ef14800b2befafc6d3ad7b.js": "/rigged-jeopardy/precache-manifest.925d214c97ef14800b2befafc6d3ad7b.js",
+  "precache-manifest.ce2a20ef603c0620049c927466b00b0e.js": "/rigged-jeopardy/precache-manifest.ce2a20ef603c0620049c927466b00b0e.js",
   "service-worker.js": "/rigged-jeopardy/service-worker.js"
 }
