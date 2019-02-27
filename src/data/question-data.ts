@@ -7,12 +7,10 @@ const questionData: QuestionData = [
       // Question 1
       {
         easy: {
-          text: 'When this happened.',
           image: `${process.env.PUBLIC_URL}/images/today.jpg`,
           answer: '????',
         },
         hard: {
-          text: 'When this happened.',
           image: `${process.env.PUBLIC_URL}/images/today.jpg`,
           answer: '????',
         },
